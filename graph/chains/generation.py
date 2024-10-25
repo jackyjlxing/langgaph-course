@@ -4,8 +4,8 @@ from langchain_core.output_parsers import StrOutputParser
 from langchain_ollama import ChatOllama
 
 # llm = ChatOpenAI(temperature=0)
-# change to llama3.2
-llm = ChatOllama(temperature=0, model="llama3.2")
+# change to mistral
+llm = ChatOllama(temperature=0, model="mistral")
 prompt = hub.pull("rlm/rag-prompt")
 
 generation_chain = prompt | llm | StrOutputParser()

@@ -1,10 +1,10 @@
 from langchain_core.prompts import ChatPromptTemplate
-from langchain_core.pydantic_v1 import BaseModel, Field
+from pydantic import BaseModel, Field
 # from langchain_openai import ChatOpenAI
 from langchain_ollama import ChatOllama
 
-# using llama3.2
-llm = ChatOllama(temperature=0, model="llama3.2")
+# using mistral
+llm = ChatOllama(temperature=0, model="mistral")
 # llm = ChatOllama(temperature=0, model="mistral")
 # llm = ChatOllama(temperature=0, model="firefunction-v2")
 class GradeDocuments(BaseModel):
