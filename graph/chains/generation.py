@@ -8,4 +8,5 @@ from langchain_ollama import ChatOllama
 llm = ChatOllama(temperature=0, model="mistral")
 prompt = hub.pull("rlm/rag-prompt")
 
+
 generation_chain = prompt | llm | StrOutputParser()
